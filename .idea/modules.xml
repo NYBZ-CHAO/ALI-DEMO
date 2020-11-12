@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SpringCloudAlibaba-Demo.iml" filepath="$PROJECT_DIR$/SpringCloudAlibaba-Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customer/customer.iml" filepath="$PROJECT_DIR$/customer/customer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/producer/producer.iml" filepath="$PROJECT_DIR$/producer/producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/txmsg_rocketmq/txmsg_demo_bank1/txmsg_demo_bank1.iml" filepath="$PROJECT_DIR$/txmsg_rocketmq/txmsg_demo_bank1/txmsg_demo_bank1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/txmsg_rocketmq/txmsg_demo_bank2/txmsg_demo_bank2.iml" filepath="$PROJECT_DIR$/txmsg_rocketmq/txmsg_demo_bank2/txmsg_demo_bank2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/txmsg_rocketmq/txmsg_rocketmq.iml" filepath="$PROJECT_DIR$/txmsg_rocketmq/txmsg_rocketmq.iml" />
+    </modules>
+  </component>
+</project>

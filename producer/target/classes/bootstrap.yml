@@ -1,0 +1,111 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000
+    min-spare-threads: 30
+  port: 9001
+spring:
+  # 环境 dev|test|prod
+  profiles:
+    active: dev
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+      enabled: true
+  application:
+    name: producer-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
+      # namespace: 187d29bc-545f-472d-bb6c-85af0017afde
+      config:
+        server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
+        file-extension: yml
+
+    alibaba:
+      seata:
+        tx-service-group: ali_tx_group
+
+#    sentinel:
+#      transport:
+#        #java -jar sentinel-dashboard-1.8.0.jar --server.port=8080  端口指定
+#        dashboard: ${SENTINEL_DASHBOARD_HOST:localhost}:${SENTINEL_DASHBOARD_PORT:8080}
+#      # sentinel 配置持久化到 nacos（data-id 自定义 要与 nacos 中配置一致）
+#      datasource:
+#        # 流控规则
+#        flow:
+#          nacos:
+#            server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
+#            data-id: ${spring.application.name}
+#            group-id: DEFAULT_GROUP
+#            data-type: json
+#            rule-type: flow
+#        # 熔断降级
+#        degrade:
+#          nacos:
+#            server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
+#            data-id: ${spring.application.name}-sentenel-degrade
+#            group-id: DEFAULT_GROUP
+#            data-type: json
+#            rule-type: degrade
+#        # 热点规则
+#        hot:
+#          nacos:
+#            server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
+#            data-id: ${spring.application.name}-sentenel-hot
+#            group-id: DEFAULT_GROUP
+#            data-type: json
+#            rule-type: param_flow
+#        # 系统规则
+#        system:
+#          nacos:
+#            server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
+#            data-id: ${spring.application.name}-sentenel-system
+#            group-id: DEFAULT_GROUP
+#            data-type: json
+#            rule-type: system
+#        # 授权规则
+#        authority:
+#          nacos:
+#            server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
+#            data-id: ${spring.application.name}-sentenel-authority
+#            group-id: DEFAULT_GROUP
+#            data-type: json
+#            rule-type: authority
+
+# nacos 日志级别设置
+logging:
+  level:
+    com:
+      alibaba:
+        nacos:
+          client:
+            naming: error
+
+#mybatis
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml
+  global-config:
+    #数据库相关配置
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: AUTO
+      #字段策略 IGNORED:"忽略判断",NOT_NULL:"非 NULL 判断"),NOT_EMPTY:"非空判断"
+      field-strategy: NOT_NULL
+      #驼峰下划线转换
+      column-underline: true
+      logic-delete-value: -1
+      logic-not-delete-value: 0
+    banner: false
+  #原生配置
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
+
+

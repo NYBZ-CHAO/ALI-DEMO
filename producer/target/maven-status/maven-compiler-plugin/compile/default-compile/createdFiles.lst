@@ -1,0 +1,13 @@
+com\springcloud\ali\entity\Product.class
+com\springcloud\ali\entity\BasePo.class
+com\springcloud\ali\controller\Seata_OrderController.class
+com\springcloud\ali\feign\CustomerFeignService.class
+com\springcloud\ali\service\impl\OrderServiceImpl.class
+com\springcloud\ali\entity\CommonResult.class
+com\springcloud\ali\controller\Sentinel_ProducerController.class
+com\springcloud\ali\entity\Product$ProductBuilder.class
+com\springcloud\ali\entity\Order.class
+com\springcloud\ali\ProducerApplication.class
+com\springcloud\ali\service\OrderService.class
+com\springcloud\ali\config\MyBatisConfig.class
+com\springcloud\ali\dao\OrderDao.class

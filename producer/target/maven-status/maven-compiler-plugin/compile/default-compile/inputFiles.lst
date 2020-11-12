@@ -1,0 +1,12 @@
+D:\Project\SpringCloudAlibaba-Demo\producer\src\main\java\com\springcloud\ali\entity\Order.java
+D:\Project\SpringCloudAlibaba-Demo\producer\src\main\java\com\springcloud\ali\entity\Product.java
+D:\Project\SpringCloudAlibaba-Demo\producer\src\main\java\com\springcloud\ali\service\OrderService.java
+D:\Project\SpringCloudAlibaba-Demo\producer\src\main\java\com\springcloud\ali\ProducerApplication.java
+D:\Project\SpringCloudAlibaba-Demo\producer\src\main\java\com\springcloud\ali\service\impl\OrderServiceImpl.java
+D:\Project\SpringCloudAlibaba-Demo\producer\src\main\java\com\springcloud\ali\entity\CommonResult.java
+D:\Project\SpringCloudAlibaba-Demo\producer\src\main\java\com\springcloud\ali\dao\OrderDao.java
+D:\Project\SpringCloudAlibaba-Demo\producer\src\main\java\com\springcloud\ali\config\MyBatisConfig.java
+D:\Project\SpringCloudAlibaba-Demo\producer\src\main\java\com\springcloud\ali\controller\Seata_OrderController.java
+D:\Project\SpringCloudAlibaba-Demo\producer\src\main\java\com\springcloud\ali\feign\CustomerFeignService.java
+D:\Project\SpringCloudAlibaba-Demo\producer\src\main\java\com\springcloud\ali\controller\Sentinel_ProducerController.java
+D:\Project\SpringCloudAlibaba-Demo\producer\src\main\java\com\springcloud\ali\entity\BasePo.java
